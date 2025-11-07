@@ -51,9 +51,6 @@ data['Predikat Wisuda'] = data.apply(klasifikasi_predikat, axis=1)
 print("=== Data Wisudawan dengan Grade dan Predikat ===")
 print(data[['NIM', 'Nama Mahasiswa', 'Program Studi', 'IPK', 'Grade', 'Predikat Wisuda']].head(10))
 
-# Bagian Visual Designer / Visual Designer / Data Visualization
-#Tulis kode program disini
-
 # Simpan hasil analisis ke file Excel baru
 output_file = "hasil_analisis_wisudawan.xlsx"
 with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
