@@ -3,6 +3,7 @@
 
 # Bagian Programer / Data Analyst
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # import dan baca data Excel
 file_path = "Data Wisudawan Kel 3.xlsx"
