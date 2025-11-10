@@ -62,7 +62,7 @@ print(f"\nFile hasil analisis disimpan sebagai: {output_file}")
 
 
 # BAGIAN VISUAL DESIGNER / DATA VISUALIZATION
-# GRAFIK JUMLAH WISUDAWAN PER PRODI
+# Grafik jumlah wisudawan per prodi
 plt.figure(figsize=(8, 5))                                
 bars = plt.bar(jumlah_per_prodi['Program Studi'],          
                jumlah_per_prodi['Jumlah Wisudawan'],      
@@ -81,8 +81,7 @@ for bar in bars:
 plt.tight_layout()                                         #
 plt.show()                                               
 
-
-# GRAFIK DISTRIBUSI PREDIKAT WISUDA (PIE CHART)
+# Grafik Distribusi Predikat Wisdua (Pie Chart)
 predikat_counts = data['Predikat Wisuda'].value_counts()   
 colors = ["#E42092", "#FC672D", "#FD0808", "#F5FD08"]     
 
