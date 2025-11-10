@@ -62,7 +62,7 @@ print(f"\nFile hasil analisis disimpan sebagai: {output_file}")
 
 
 # BAGIAN VISUAL DESIGNER / DATA VISUALIZATION
-# ⿡ GRAFIK JUMLAH WISUDAWAN PER PRODI
+# GRAFIK JUMLAH WISUDAWAN PER PRODI
 plt.figure(figsize=(8, 5))                                
 bars = plt.bar(jumlah_per_prodi['Program Studi'],          
                jumlah_per_prodi['Jumlah Wisudawan'],      
@@ -82,7 +82,7 @@ plt.tight_layout()                                         #
 plt.show()                                               
 
 
-# ⿢ GRAFIK DISTRIBUSI PREDIKAT WISUDA (PIE CHART)
+# GRAFIK DISTRIBUSI PREDIKAT WISUDA (PIE CHART)
 predikat_counts = data['Predikat Wisuda'].value_counts()   
 colors = ["#E42092", "#FC672D", "#FD0808", "#F5FD08"]     
 
@@ -98,10 +98,7 @@ plt.title('Distribusi Predikat Wisuda', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-
-# ===========================================================
 # Bagian Penyimpanan Hasil Analisis ke Excel
-# ===========================================================
 output_file = "hasil_analisis_wisudawan.xlsx"
 with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
     data.to_excel(writer, sheet_name='Data Lengkap', index=False)
@@ -109,7 +106,3 @@ with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
     predikat_counts.to_frame('Jumlah').to_excel(writer, sheet_name='Distribusi Predikat', index=False)
 
 print(f"\nFile hasil analisis disimpan sebagai: {output_file}")
-
-
-#=====================SELESAI=========================
-
